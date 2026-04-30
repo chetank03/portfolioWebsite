@@ -12,11 +12,11 @@ export default function Projects({ projects }: Props) {
       transition={{ duration: 1.5 }}
       className=" h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
     >
-      <h3 className="absolute top-20 md:top-24 uppercase tracking-[20px] text-gray-500 text-xl md:text-2xl">
+      <h3 className="absolute top-20 md:top-24 uppercase tracking-[20px] text-slate-400 text-xl md:text-2xl">
         Projects
       </h3>
 
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-darkGreen/80">
+      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-slate-800/40 scrollbar-thumb-darkGreen/80">
         {projects?.map((project, i) => (
           <div
             key={project._id}
@@ -27,9 +27,9 @@ export default function Projects({ projects }: Props) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
-              className="w-full max-w-3xl rounded-3xl border border-darkGreen/20 bg-white/80 p-8 shadow-xl"
+              className="w-full max-w-3xl rounded-3xl border border-darkGreen/20 bg-slate-950/85 p-8 shadow-2xl shadow-black/30"
             >
-              <div className="mb-6 h-48 rounded-2xl border border-dashed border-darkGreen/20 bg-gradient-to-br from-white to-darkGreen/10 flex items-center justify-center text-center text-3xl md:text-5xl font-semibold text-darkGreen px-6">
+              <div className="mb-6 h-48 rounded-2xl border border-dashed border-darkGreen/30 bg-gradient-to-br from-slate-900 to-darkGreen/10 flex items-center justify-center text-center text-3xl md:text-5xl font-semibold text-darkGreen px-6">
                 {project.title}
               </div>
 
@@ -44,7 +44,7 @@ export default function Projects({ projects }: Props) {
                   {project?.technologies.map((technology) => (
                     <span
                       key={technology._id}
-                      className="rounded-full border border-darkGreen/20 px-3 py-1 text-sm text-darkGreen"
+                      className="rounded-full border border-darkGreen/30 bg-darkGreen/10 px-3 py-1 text-sm text-darkGreen"
                     >
                       {technology.title}
                     </span>
@@ -60,7 +60,7 @@ export default function Projects({ projects }: Props) {
         ))}
       </div>
 
-      <div className="w-full absolute top-[20%] md:top-[30%] bg-darkGreen/40 left-0 h-[500px] -skew-y-12"></div>
+      <div className="w-full absolute top-[20%] md:top-[30%] bg-darkGreen/10 left-0 h-[500px] -skew-y-12"></div>
     </motion.div>
   );
 }

@@ -8,12 +8,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        lightGreen: "#68B2A0",
-        darkGreen: "#2C6975",
-        lightBackground: "#F8F8F8",
-        darkBackground: "#22262D",
-        darkBlack: "#000000",
-        grayColor: "#22262D",
+        lightGreen: "#2DD4BF",
+        darkGreen: "#5EEAD4",
+        lightBackground: "#071014",
+        darkBackground: "#0B1720",
+        darkBlack: "#E6F1F5",
+        grayColor: "#94A3B8",
         yellowColor: "FFE033",
       },
     },

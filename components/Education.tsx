@@ -21,7 +21,7 @@ export default function Education({ education }: Props) {
       transition={{ duration: 1.5 }}
       className="min-h-screen flex relative flex-col text-center max-w-7xl px-10 py-24 justify-center mx-auto items-center"
     >
-      <h3 className="absolute top-20 md:top-24 uppercase tracking-[20px] text-gray-500 text-xl md:text-2xl left-1/2 -translate-x-1/2">
+      <h3 className="absolute top-20 md:top-24 uppercase tracking-[20px] text-slate-400 text-xl md:text-2xl left-1/2 -translate-x-1/2">
         Education
       </h3>
 
@@ -36,10 +36,10 @@ export default function Education({ education }: Props) {
           .map((item) => (
             <article
               key={item._id}
-              className="flex h-full flex-col items-center rounded-3xl border border-darkGreen/20 bg-white/90 p-6 text-center shadow-xl"
+              className="flex h-full flex-col items-center rounded-3xl border border-darkGreen/20 bg-slate-950/80 p-6 text-center shadow-2xl shadow-black/30"
             >
               {item.logoUrl && (
-                <div className="mb-5 flex h-24 w-40 items-center justify-center rounded-2xl border border-darkGreen/20 bg-white px-4 shadow-sm">
+                <div className="mb-5 flex h-24 w-40 items-center justify-center rounded-2xl border border-darkGreen/20 bg-white px-4 shadow-lg shadow-darkGreen/10">
                   <Image
                     src={item.logoUrl}
                     alt={`${item.school} logo`}
@@ -49,13 +49,13 @@ export default function Education({ education }: Props) {
                   />
                 </div>
               )}
-              <p className="text-sm uppercase tracking-[6px] text-gray-500">
+              <p className="text-sm uppercase tracking-[6px] text-slate-400">
                 {item.school}
               </p>
               <h4 className="mt-3 text-xl md:text-2xl font-semibold text-darkBlack">
                 {item.degree}
               </h4>
-              <p className="mt-3 text-sm md:text-base text-gray-500">
+              <p className="mt-3 text-sm md:text-base text-slate-400">
                 {item.location} | {formatMonthYear(item.dateStarted)} -{" "}
                 {formatMonthYear(item.dateEnded)}
               </p>
@@ -63,7 +63,7 @@ export default function Education({ education }: Props) {
                 {item.coursework.map((course) => (
                   <span
                     key={course}
-                    className="rounded-full border border-darkGreen/20 px-3 py-1 text-sm text-darkGreen"
+                    className="rounded-full border border-darkGreen/30 bg-darkGreen/10 px-3 py-1 text-sm text-darkGreen"
                   >
                     {course}
                   </span>

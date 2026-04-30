@@ -28,19 +28,19 @@ export default function Hero({ pageInfo, socials }: Props) {
           <SocialIcon
             key={social._id}
             url={social.url}
-            fgColor="gray"
+            fgColor="#94A3B8"
             bgColor="transparent"
             className="!h-10 !w-10"
           />
         ))}
       </div>
 
-      <div className="relative flex h-32 w-32 items-center justify-center rounded-full border border-darkGreen/20 bg-white/80 text-5xl font-semibold text-darkGreen shadow-xl">
+      <div className="relative flex h-32 w-32 items-center justify-center rounded-full border border-darkGreen/30 bg-slate-950/80 text-5xl font-semibold text-darkGreen shadow-2xl shadow-darkGreen/20">
         CK
       </div>
 
       <div className="z-20">
-        <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[10px] md:tracking-[15px]">
+        <h2 className="text-sm uppercase text-slate-400 pb-2 tracking-[10px] md:tracking-[15px]">
           {pageInfo?.role}
         </h2>
         <h1 className="text-2xl md:text-5xl lg:text-6xl font-semibold px-10">

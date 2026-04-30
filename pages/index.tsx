@@ -30,8 +30,8 @@ type Props = {
 const Home = ({ pageInfo, experiences, education, projects, skills, socials }: Props) => {
   return (
     <div
-      className="bg-lightBackground text-darkBlack h-screen snap-y snap-mandatory
-    overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-darkGreen/80"
+      className="bg-lightBackground bg-[radial-gradient(circle_at_top,#12313a_0%,#071014_42%,#030608_100%)] text-darkBlack h-screen snap-y snap-mandatory
+    overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-slate-800/40 scrollbar-thumb-darkGreen/80"
     >
       <Head>
         <link
@@ -93,7 +93,7 @@ const Home = ({ pageInfo, experiences, education, projects, skills, socials }: P
       <Link href="#hero" aria-label="Back to top">
         <footer className="sticky bottom-5 z-30 flex w-full cursor-pointer justify-end pr-5 md:pr-10">
           <div className="flex items-center justify-center">
-            <div className="h-10 w-10 bg-darkGreen/80 rounded-full flex items-center justify-center">
+            <div className="h-10 w-10 bg-darkGreen/80 rounded-full flex items-center justify-center shadow-lg shadow-darkGreen/20">
               <ArrowUpIcon className="h-6 w-6 text-white animate-pulse" />
             </div>
           </div>
