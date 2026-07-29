@@ -34,8 +34,10 @@ separate, explicit part of the sweep — see Implementation.)
 - **Headings/display**: `Noto Serif JP` — a real Japanese-designed Mincho serif with full
   Latin support, not a generic Western "elegant serif" default.
 - **Body/UI text**: `Noto Sans JP` — matching Gothic companion, calm and highly readable.
-- Load via `next/font/google` (already a Next.js project; avoids a manual `<link>`/CDN
-  import and the associated render-blocking request).
+- Load via a plain Google Fonts `<link>` in a new `pages/_document.tsx` (not
+  `next/font/google`: this project pins `next@13.0.2`, which predates Next's built-in font
+  loader — introduced in 13.2 — so importing `next/font/google` here would fail to
+  resolve; a `<link>` needs no new dependency and works on any Next version).
 - Weight usage stays restrained: headings 400/500 only, body 400 (avoid heavy 700+ weights
   which would fight the calm/Zen brief).
 
