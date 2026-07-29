@@ -48,7 +48,7 @@ export default function SideNav() {
             <span
               aria-hidden="true"
               className={`h-2 w-2 shrink-0 rounded-full transition-all duration-300 ${
-                isActive ? "scale-150 bg-lightGreen" : "bg-grayColor/70"
+                isActive ? "scale-150 bg-darkGreen" : "bg-grayColor/80"
               }`}
             />
             <span
