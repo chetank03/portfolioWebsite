@@ -12,11 +12,15 @@ export default function Projects({ projects }: Props) {
       transition={{ duration: 1.5 }}
       className=" h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
     >
-      <h3 className="absolute top-20 md:top-24 uppercase tracking-[20px] text-slate-400 text-xl md:text-2xl">
+      <h3 className="absolute top-20 md:top-24 flex items-center gap-3 uppercase tracking-[20px] text-grayColor text-xl md:text-2xl font-serif">
+        <span
+          className="inline-block h-2 w-2 rounded-full bg-yellowColor"
+          aria-hidden="true"
+        />
         Projects
       </h3>
 
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-slate-800/40 scrollbar-thumb-darkGreen/80">
+      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-darkBackground scrollbar-thumb-darkGreen/80">
         {projects?.map((project, i) => (
           <div
             key={project._id}
@@ -27,14 +31,14 @@ export default function Projects({ projects }: Props) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
-              className="w-full max-w-3xl rounded-3xl border border-darkGreen/20 bg-slate-950/85 p-8 shadow-2xl shadow-black/30"
+              className="w-full max-w-3xl rounded-3xl border border-darkGreen/20 bg-darkBackground p-8 shadow-2xl shadow-darkBlack/10"
             >
-              <div className="mb-6 h-48 rounded-2xl border border-dashed border-darkGreen/30 bg-gradient-to-br from-slate-900 to-darkGreen/10 flex items-center justify-center text-center text-3xl md:text-5xl font-semibold text-darkGreen px-6">
+              <div className="mb-6 h-48 rounded-2xl border border-dashed border-darkGreen/30 bg-gradient-to-br from-darkBackground to-darkGreen/10 flex items-center justify-center text-center text-3xl md:text-5xl font-serif font-semibold text-darkGreen px-6">
                 {project.title}
               </div>
 
               <div className="space-y-5 md:space-y-8 px-0 md:px-4 max-w-6xl">
-                <h4 className="text-lg md:text-2xl lg:text-4xl font-semibold text-center">
+                <h4 className="text-lg md:text-2xl lg:text-4xl font-serif font-semibold text-center">
                   <span className="underline decoration-darkGreen/50">
                     Project {i + 1}:
                   </span>{" "}
