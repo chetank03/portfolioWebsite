@@ -112,6 +112,114 @@ export const experiences: Experience[] = [
 export const projects: Project[] = [
   {
     ...blankMeta,
+    _id: "project-option-engine",
+    _type: "project",
+    title: "American Option Lattice Engine",
+    linkToBuild: "https://github.com/chetank03/american-option-lattice-engine",
+    image: null,
+    summary:
+      "C++17 binomial lattice pricer: Cox-Ross-Rubinstein for European options, Snell-envelope backward induction for American early exercise. Swapping the naive O(N^2) grid for an O(N) rolling path took a 50,000-step American put from 173 seconds and 9.7 GB to 1.6 seconds and 0.4 MB, with both paths agreeing to 1e-10. Validated against Black-Scholes convergence and put-call parity rather than against itself, with 30 checks gating CI. Testing surfaced 3 real defects, including an incomplete no-arbitrage check that was silently admitting a negative risk-neutral probability.",
+    technologies: [
+      { ...blankMeta, _id: "proj-tech-cpp-lattice", _type: "technology", image: null, progress: 80, title: "C++17" },
+      { ...blankMeta, _id: "proj-tech-crr", _type: "technology", image: null, progress: 72, title: "CRR Lattice" },
+      { ...blankMeta, _id: "proj-tech-quant", _type: "technology", image: null, progress: 68, title: "Quant Finance" },
+    ],
+  },
+  {
+    ...blankMeta,
+    _id: "project-iicci",
+    _type: "project",
+    title: "IICCI Trade Analytics",
+    linkToBuild: "",
+    liveUrl: "https://iicci.up.railway.app",
+    image: null,
+    summary:
+      "India-Italy bilateral trade analytics platform: Django REST and PostgreSQL behind a React and Recharts dashboard. 21 endpoints covered by 24 tests that pin the aggregation rules, Firebase Google sign-in gated behind a Django-side admin approval step, Excel import in append or replace mode, and short-lived response caching on the reporting routes.",
+    technologies: [
+      { ...blankMeta, _id: "proj-tech-django-iicci", _type: "technology", image: null, progress: 80, title: "Django REST" },
+      { ...blankMeta, _id: "proj-tech-postgres-iicci", _type: "technology", image: null, progress: 74, title: "PostgreSQL" },
+      { ...blankMeta, _id: "proj-tech-recharts-iicci", _type: "technology", image: null, progress: 76, title: "React + Recharts" },
+    ],
+  },
+  {
+    ...blankMeta,
+    _id: "project-bigsmiles",
+    _type: "project",
+    title: "BigSMILES Viewer",
+    linkToBuild: "https://github.com/chetank03/bigsmiles-viewer",
+    liveUrl: "https://bigsmiles-viewer.up.railway.app",
+    image: null,
+    summary:
+      "Parses a subset of the BigSMILES polymer notation into a graph, rendering stochastic objects and repeat units as nested boxes instead of flattening them the way a plain SMILES viewer would, with RDKit computing per-unit formula and weight. Code-splitting Cytoscape cut the initial JS bundle 69 percent, from 632 KB to 197 KB. 13 API tests and 7 Playwright specs run in CI, including axe-core WCAG 2.1 AA audits that caught a real contrast failure.",
+    technologies: [
+      { ...blankMeta, _id: "proj-tech-fastapi-bigsmiles", _type: "technology", image: null, progress: 78, title: "FastAPI" },
+      { ...blankMeta, _id: "proj-tech-cytoscape-bigsmiles", _type: "technology", image: null, progress: 74, title: "Cytoscape.js" },
+      { ...blankMeta, _id: "proj-tech-rdkit-bigsmiles", _type: "technology", image: null, progress: 70, title: "RDKit" },
+    ],
+  },
+  {
+    ...blankMeta,
+    _id: "project-studio",
+    _type: "project",
+    title: "Studio (client site)",
+    linkToBuild: "",
+    liveUrl: "https://studio-flax-mu-86.vercel.app",
+    image: null,
+    summary:
+      "Site for a bespoke art-installation studio, built to a Figma design in Next.js, TypeScript, Supabase, and Framer Motion. Behind it sits a custom admin area with a rich-text journal editor, portfolio management, and an enquiry inbox wired to transactional email, so the owner runs the site without a developer. Error boundaries in place and CI running lint and build on every push.",
+    technologies: [
+      { ...blankMeta, _id: "proj-tech-next-studio", _type: "technology", image: null, progress: 80, title: "Next.js" },
+      { ...blankMeta, _id: "proj-tech-supabase-studio", _type: "technology", image: null, progress: 74, title: "Supabase" },
+      { ...blankMeta, _id: "proj-tech-framer-studio", _type: "technology", image: null, progress: 72, title: "Framer Motion" },
+    ],
+  },
+  {
+    ...blankMeta,
+    _id: "project-parkinsons",
+    _type: "project",
+    title: "Parkinson's Motion Monitor",
+    linkToBuild: "https://github.com/chetank03/parkinsons-motion-monitor",
+    image: null,
+    summary:
+      "About 1,445 lines of embedded C++ on an STM32 DISCO-L475VG-IOT01A, reading an LSM6DSL IMU over I2C at 400 kHz. A 256-point CMSIS-DSP FFT over a 156-sample window at 52 Hz separates resting tremor (3-5 Hz), dyskinesia (5-7 Hz), and freezing of gait, with 3-window confirmation to suppress false positives and BLE GATT telemetry out. Interrupt-driven with a polling fallback, so a missed data-ready line degrades the sample rate instead of stalling the device. Thresholds are hand-tuned; there is no on-device ML.",
+    technologies: [
+      { ...blankMeta, _id: "proj-tech-stm32-parkinsons", _type: "technology", image: null, progress: 74, title: "STM32 / mbed" },
+      { ...blankMeta, _id: "proj-tech-cmsis-parkinsons", _type: "technology", image: null, progress: 70, title: "CMSIS-DSP FFT" },
+      { ...blankMeta, _id: "proj-tech-ble-parkinsons", _type: "technology", image: null, progress: 66, title: "BLE GATT" },
+    ],
+  },
+  {
+    ...blankMeta,
+    _id: "project-gla-dpo",
+    _type: "project",
+    title: "GLA-DPO Transformer",
+    linkToBuild: "https://github.com/chetank03/gla-dpo-transformer",
+    image: null,
+    summary:
+      "A 158M-parameter Gated Linear Attention language model written from scratch in PyTorch, pretrained on TinyStories and then aligned with Direct Preference Optimization, no separate reward model. GLA matches plain linear attention's loss at equal steps while staying O(N), and holds memory constant during inference where a standard transformer's KV-cache keeps growing. A two-person NYU project with Bryce Miranda: he built the DPO stage and preference data, I built the GLA architecture, pretraining, and the generation interface.",
+    technologies: [
+      { ...blankMeta, _id: "proj-tech-pytorch-gla", _type: "technology", image: null, progress: 76, title: "PyTorch" },
+      { ...blankMeta, _id: "proj-tech-gla", _type: "technology", image: null, progress: 72, title: "Gated Linear Attention" },
+      { ...blankMeta, _id: "proj-tech-dpo", _type: "technology", image: null, progress: 70, title: "DPO" },
+    ],
+  },
+  {
+    ...blankMeta,
+    _id: "project-compilers",
+    _type: "project",
+    title: "Two Compilers: LLVM-IR and JVM Bytecode",
+    linkToBuild: "https://github.com/chetank03/functional-language-compiler-llvm",
+    image: null,
+    summary:
+      "Two Scala compilers sharing a regex-derivative lexer built from first principles rather than a generator. One takes a small functional language to LLVM-IR end to end, demonstrated on recursion, Mandelbrot, and Towers of Hanoi. The companion repo, while-language-jvm-compiler, interprets a WHILE-like imperative language and emits Jasmin-style JVM assembly, demonstrated on Collatz, Fibonacci, factorization, and primes.",
+    technologies: [
+      { ...blankMeta, _id: "proj-tech-scala-compilers", _type: "technology", image: null, progress: 70, title: "Scala" },
+      { ...blankMeta, _id: "proj-tech-llvm-compilers", _type: "technology", image: null, progress: 68, title: "LLVM-IR" },
+      { ...blankMeta, _id: "proj-tech-jvm-compilers", _type: "technology", image: null, progress: 68, title: "JVM Bytecode" },
+    ],
+  },
+  {
+    ...blankMeta,
     _id: "project-notely",
     _type: "project",
     title: "Notely - Real-Time Notes Platform",
@@ -138,51 +246,6 @@ export const projects: Project[] = [
       { ...blankMeta, _id: "proj-tech-cnn", _type: "technology", image: null, progress: 78, title: "CNN" },
       { ...blankMeta, _id: "proj-tech-onnx-cv", _type: "technology", image: null, progress: 76, title: "ONNX Runtime" },
       { ...blankMeta, _id: "proj-tech-opencv", _type: "technology", image: null, progress: 80, title: "OpenCV" },
-    ],
-  },
-  {
-    ...blankMeta,
-    _id: "project-gla-dpot",
-    _type: "project",
-    title: "GLA-DPOT Transformer",
-    linkToBuild: "https://github.com/chetank03",
-    image: null,
-    summary:
-      "Built a custom PyTorch transformer with Gated Linear Attention, RMSNorm, and SwiGLU, reducing output repetition by 25% and improving coherence by 15% over baseline models.",
-    technologies: [
-      { ...blankMeta, _id: "proj-tech-pytorch", _type: "technology", image: null, progress: 76, title: "PyTorch" },
-      { ...blankMeta, _id: "proj-tech-transformers", _type: "technology", image: null, progress: 74, title: "Transformers" },
-      { ...blankMeta, _id: "proj-tech-rmsnorm", _type: "technology", image: null, progress: 70, title: "RMSNorm" },
-    ],
-  },
-  {
-    ...blankMeta,
-    _id: "project-option-engine",
-    _type: "project",
-    title: "American Option Lattice Engine",
-    linkToBuild: "https://github.com/chetank03",
-    image: null,
-    summary:
-      "Built a C++ lattice-based pricing engine for American options using CRR valuation, Snell-style backward induction for early exercise, and reusable abstractions for the tree model, payoff logic, and pricing lattice.",
-    technologies: [
-      { ...blankMeta, _id: "proj-tech-cpp-lattice", _type: "technology", image: null, progress: 80, title: "C++" },
-      { ...blankMeta, _id: "proj-tech-crr", _type: "technology", image: null, progress: 72, title: "CRR" },
-      { ...blankMeta, _id: "proj-tech-quant", _type: "technology", image: null, progress: 68, title: "Quant Finance" },
-    ],
-  },
-  {
-    ...blankMeta,
-    _id: "project-compiler",
-    _type: "project",
-    title: "Functional Language Compiler to LLVM-IR",
-    linkToBuild: "https://github.com/chetank03",
-    image: null,
-    summary:
-      "Implemented a Scala compiler and lexer pipeline for a small functional language, extending derivative-based tokenization, typed language constructs, and LLVM-IR code generation for programs including recursion and Mandelbrot-style workloads.",
-    technologies: [
-      { ...blankMeta, _id: "proj-tech-scala", _type: "technology", image: null, progress: 70, title: "Scala" },
-      { ...blankMeta, _id: "proj-tech-llvm", _type: "technology", image: null, progress: 68, title: "LLVM-IR" },
-      { ...blankMeta, _id: "proj-tech-compilers", _type: "technology", image: null, progress: 72, title: "Compilers" },
     ],
   },
 ];
