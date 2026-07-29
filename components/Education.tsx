@@ -19,9 +19,13 @@ export default function Education({ education }: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="min-h-screen flex relative flex-col text-center max-w-7xl px-10 py-24 justify-center mx-auto items-center"
+      className="min-h-screen flex relative flex-col text-center max-w-7xl px-12 py-24 justify-center mx-auto items-center md:px-16"
     >
-      <h3 className="absolute top-20 md:top-24 uppercase tracking-[20px] text-slate-400 text-xl md:text-2xl left-1/2 -translate-x-1/2">
+      <h3 className="absolute top-20 md:top-24 flex items-center gap-3 uppercase tracking-[20px] text-grayColor text-xl md:text-2xl left-1/2 -translate-x-1/2 font-serif">
+        <span
+          className="inline-block h-2 w-2 rounded-full bg-yellowColor"
+          aria-hidden="true"
+        />
         Education
       </h3>
 
@@ -36,7 +40,7 @@ export default function Education({ education }: Props) {
           .map((item) => (
             <article
               key={item._id}
-              className="flex h-full flex-col items-center rounded-3xl border border-darkGreen/20 bg-slate-950/80 p-6 text-center shadow-2xl shadow-black/30"
+              className="flex h-full flex-col items-center rounded-3xl border border-darkGreen/20 bg-darkBackground p-6 text-center shadow-2xl shadow-darkBlack/10"
             >
               {item.logoUrl && (
                 <div className="mb-5 flex h-24 w-40 items-center justify-center rounded-2xl border border-darkGreen/20 bg-white px-4 shadow-lg shadow-darkGreen/10">
@@ -49,13 +53,13 @@ export default function Education({ education }: Props) {
                   />
                 </div>
               )}
-              <p className="text-sm uppercase tracking-[6px] text-slate-400">
+              <p className="text-sm uppercase tracking-[6px] text-grayColor">
                 {item.school}
               </p>
-              <h4 className="mt-3 text-xl md:text-2xl font-semibold text-darkBlack">
+              <h4 className="mt-3 text-xl md:text-2xl font-serif font-semibold text-darkBlack">
                 {item.degree}
               </h4>
-              <p className="mt-3 text-sm md:text-base text-slate-400">
+              <p className="mt-3 text-sm md:text-base text-grayColor">
                 {item.location} | {formatMonthYear(item.dateStarted)} -{" "}
                 {formatMonthYear(item.dateEnded)}
               </p>
