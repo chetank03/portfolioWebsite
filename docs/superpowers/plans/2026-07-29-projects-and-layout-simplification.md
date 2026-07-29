@@ -530,7 +530,7 @@ git commit -m "Switch to natural scroll, add skip link and side nav rail"
 **Interfaces:**
 - Consumes: `SectionHeading` from Task 2 (`{ label, action? }`; supplies its own `mb-12`).
 
-These three each carry `h-screen` on their root element. `Skills.tsx` carries **both** `h-screen` and `min-h-screen` on the same element — remove both. Each also has an absolute-positioned heading with the gold dot, which `SectionHeading` replaces. `About.tsx`'s inner circle keeps its `-mb-24 md:mb-0` overlap removed in favour of an ordinary flex `gap-12`, since the negative margin only existed to claw back space in the viewport-locked layout. `About.tsx`'s pre-existing `md:h-95` class is not a real Tailwind utility and has never done anything; it is left alone as out of scope.
+These three each carry `h-screen` on their root element. `Skills.tsx` carries **both** `h-screen` and `min-h-screen` on the same element — remove both. Each also has an absolute-positioned heading with the gold dot, which `SectionHeading` replaces. `About.tsx`'s inner circle keeps its `-mb-24 md:mb-0` overlap removed in favour of an ordinary flex `gap-12`, since the negative margin only existed to claw back space in the viewport-locked layout. `About.tsx`'s pre-existing `md:h-95` class is not a real Tailwind utility and has never applied, leaving the circle 208px tall against a 256px width at the `md` breakpoint; the user approved correcting it to `md:h-64` since this task rewrites that line anyway.
 
 - [ ] **Step 1: Replace `components/About.tsx`**
 
@@ -566,7 +566,7 @@ export default function About({ pageInfo }: Props) {
             opacity: 1,
           }}
           viewport={{ once: true }}
-          className="flex h-52 w-52 flex-shrink-0 items-center justify-center rounded-full border border-darkGreen/30 bg-gradient-to-br from-darkBackground to-darkGreen/20 shadow-2xl shadow-darkGreen/10 md:h-95 md:w-64 md:rounded-lg xl:h-[600px] xl:w-[500px]"
+          className="flex h-52 w-52 flex-shrink-0 items-center justify-center rounded-full border border-darkGreen/30 bg-gradient-to-br from-darkBackground to-darkGreen/20 shadow-2xl shadow-darkGreen/10 md:h-64 md:w-64 md:rounded-lg xl:h-[600px] xl:w-[500px]"
         >
           <div className="text-center px-8">
             <p className="text-6xl xl:text-8xl font-serif font-semibold text-darkGreen">CK</p>
