@@ -30,8 +30,8 @@ type Props = {
 const Home = ({ pageInfo, experiences, education, projects, skills, socials }: Props) => {
   return (
     <div
-      className="bg-lightBackground bg-[radial-gradient(circle_at_top,#12313a_0%,#071014_42%,#030608_100%)] text-darkBlack h-screen snap-y snap-mandatory
-    overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-slate-800/40 scrollbar-thumb-darkGreen/80"
+      className="bg-lightBackground bg-[radial-gradient(circle_at_top,#FFFFFF_0%,#FAF6EE_42%,#F1EBDD_100%)] text-darkBlack h-screen snap-y snap-mandatory
+    overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-lightBackground scrollbar-thumb-darkGreen/80"
     >
       <Head>
         <link
@@ -61,32 +61,32 @@ const Home = ({ pageInfo, experiences, education, projects, skills, socials }: P
       </section>
 
       {/* About */}
-      <section id="about" className="snap-center">
+      <section id="about" className="snap-center border-t border-grayColor/20">
         <About pageInfo={pageInfo} />
       </section>
 
       {/* Experiences */}
-      <section id="experience" className="snap-center">
+      <section id="experience" className="snap-center border-t border-grayColor/20">
         <WorkExperience experiences={experiences} />
       </section>
 
       {/* Education */}
-      <section id="education" className="snap-start">
+      <section id="education" className="snap-start border-t border-grayColor/20">
         <Education education={education} />
       </section>
 
       {/* Skills */}
-      <section id="skills" className="snap-start">
+      <section id="skills" className="snap-start border-t border-grayColor/20">
         <Skills skills={skills} />
       </section>
 
       {/* Projects */}
-      <section id="projects" className="snap-start">
+      <section id="projects" className="snap-start border-t border-grayColor/20">
         <Projects projects={projects} />
       </section>
 
       {/* Contact */}
-      <section id="contact" className="snap-start">
+      <section id="contact" className="snap-start border-t border-grayColor/20">
         <ContactMe pageInfo={pageInfo} />
       </section>
 
