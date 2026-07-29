@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 import { Education as EducationType } from "../typings";
+import SectionHeading from "./SectionHeading";
 
 type Props = { education: EducationType[] };
 
@@ -19,17 +20,11 @@ export default function Education({ education }: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="min-h-screen flex relative flex-col text-center max-w-7xl px-12 py-24 justify-center mx-auto items-center md:px-16"
+      className="mx-auto flex max-w-6xl flex-col px-12 py-24 md:px-16 md:py-32"
     >
-      <h3 className="absolute top-20 md:top-24 flex items-center gap-3 uppercase tracking-[20px] text-grayColor text-xl md:text-2xl left-1/2 -translate-x-1/2 font-serif">
-        <span
-          className="inline-block h-2 w-2 rounded-full bg-yellowColor"
-          aria-hidden="true"
-        />
-        Education
-      </h3>
+      <SectionHeading label="education" />
 
-      <div className="grid w-full max-w-6xl gap-6 md:grid-cols-2 mt-16">
+      <div className="grid w-full gap-6 md:grid-cols-2">
         {education
           .slice()
           .sort(
