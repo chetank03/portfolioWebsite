@@ -3,15 +3,16 @@
 @tailwind utilities;
 
 body {
-  background: #071014;
+  background: #faf6ee;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 @layer components {
   .heroButton {
-    @apply px-3 md:px-6 py-2 border border-darkGreen/20 rounded-full uppercase text-xs tracking-widest text-slate-400 transition-all hover:border-darkGreen/70 hover:text-darkGreen;
+    @apply px-3 md:px-6 py-2 border border-darkGreen/20 rounded-full uppercase text-xs tracking-widest text-grayColor transition-all hover:border-darkGreen/70 hover:text-darkGreen;
   }
 
   .contactInput {
-    @apply outline-none bg-white/10 rounded-lg border border-darkGreen/10 border-b-2 px-6 py-3 md:py-4 text-slate-100 placeholder-slate-500 transition-all focus:border-darkGreen/60 focus:text-white hover:border-darkGreen/40;
+    @apply outline-none bg-darkBackground rounded-lg border border-darkGreen/10 border-b-2 px-6 py-3 md:py-4 text-darkBlack placeholder-grayColor/70 transition-all focus:border-darkGreen/60 focus:text-darkBlack hover:border-darkGreen/40;
   }
 }
