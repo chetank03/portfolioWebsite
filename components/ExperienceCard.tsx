@@ -23,7 +23,7 @@ export default function ExperienceCard({ experience }: Props) {
   );
 
   return (
-    <article className=" flex drop-shadow-xl flex-col rounded-3xl items-center space-y-0 flex-shrink-0 w-72  md:w-[600px] xl:w-[700px] snap-center border border-darkGreen/20 bg-slate-950/80 bg-gradient-to-tr from-slate-950 to-darkGreen/10 p-5 md:p10 hover:opacity-100 opacity-100 cursor-pointer transition-opacity duration-200 shadow-2xl shadow-black/30 ">
+    <article className="flex drop-shadow-xl flex-col rounded-3xl items-center space-y-0 w-full md:w-[calc(50%-1rem)] border border-darkGreen/20 bg-slate-950/80 bg-gradient-to-tr from-slate-950 to-darkGreen/10 p-5 md:p-10 hover:opacity-100 opacity-100 cursor-pointer transition-opacity duration-200 shadow-2xl shadow-black/30 ">
       <div className="w-full px-0 md:px-10">
         <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between md:text-left">
           <div>
@@ -61,7 +61,7 @@ export default function ExperienceCard({ experience }: Props) {
             : new Date(experience?.dateEnded).toDateString()}
         </p>
       </div>
-      <ul className="px-0 md:px-10 list-disc  text-slate-200 space-y-2 pr-5 text-justify ml-0 text-sm md:text-lg pl-5 overflow-y-scroll scrollbar-thin scrollbar-track-slate-800/70 scrollbar-thumb-darkGreen/80">
+      <ul className="px-0 md:px-10 list-disc  text-slate-200 space-y-2 pr-5 text-justify ml-0 text-sm md:text-lg pl-5">
         {experience?.points.map((point, i) => (
           <li key={i}>{point}</li>
         ))}
