@@ -1,70 +1,126 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useState } from "react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import { Project } from "../typings";
+import SectionHeading from "./SectionHeading";
 
 type Props = { projects: Project[] };
 
 export default function Projects({ projects }: Props) {
+  const [index, setIndex] = useState(0);
+  const project = projects[index];
+
+  if (!project) return null;
+
+  const linkClasses =
+    "font-sans text-sm uppercase tracking-widest text-grayColor transition-colors hover:text-darkGreen";
+  const arrowClasses =
+    "flex h-11 w-11 items-center justify-center rounded-full border border-darkGreen/30 text-darkGreen transition hover:bg-darkGreen/10 disabled:opacity-30 disabled:hover:bg-transparent";
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1.5 }}
-      className=" h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
-    >
-      <h3 className="absolute top-20 md:top-24 flex items-center gap-3 uppercase tracking-[20px] text-grayColor text-xl md:text-2xl font-serif">
-        <span
-          className="inline-block h-2 w-2 rounded-full bg-yellowColor"
-          aria-hidden="true"
-        />
-        Projects
-      </h3>
+    <div className="mx-auto flex max-w-4xl flex-col px-12 py-24 md:px-16 md:py-32">
+      <SectionHeading
+        label="projects"
+        action={{ href: "https://github.com/chetank03", text: "View GitHub →" }}
+      />
 
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-darkBackground scrollbar-thumb-darkGreen/80">
-        {projects?.map((project, i) => (
-          <div
-            key={project._id}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-10 md:p-44 h-screen"
-          >
-            <motion.div
-              initial={{ y: -100, opacity: 0 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.2 }}
-              viewport={{ once: true }}
-              className="w-full max-w-3xl rounded-3xl border border-darkGreen/20 bg-darkBackground p-8 shadow-2xl shadow-darkBlack/10"
+      <motion.article
+        key={project._id}
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="rounded-3xl border border-darkGreen/20 bg-darkBackground p-8 shadow-2xl shadow-darkBlack/10 md:p-10"
+      >
+        <h4 className="font-serif text-2xl font-semibold text-darkBlack md:text-3xl">
+          {project.title}
+        </h4>
+
+        <div className="mt-4 flex flex-wrap gap-2">
+          {project.technologies.map((technology) => (
+            <span
+              key={technology._id}
+              className="rounded-full border border-darkGreen/30 bg-darkGreen/10 px-3 py-1 text-sm text-darkGreen"
             >
-              <div className="mb-6 h-48 rounded-2xl border border-dashed border-darkGreen/30 bg-gradient-to-br from-darkBackground to-darkGreen/10 flex items-center justify-center text-center text-3xl md:text-5xl font-serif font-semibold text-darkGreen px-6">
-                {project.title}
-              </div>
+              {technology.title}
+            </span>
+          ))}
+        </div>
 
-              <div className="space-y-5 md:space-y-8 px-0 md:px-4 max-w-6xl">
-                <h4 className="text-lg md:text-2xl lg:text-4xl font-serif font-semibold text-center">
-                  <span className="underline decoration-darkGreen/50">
-                    Project {i + 1}:
-                  </span>{" "}
-                  {project?.title}
-                </h4>
-                <div className="flex items-center gap-2 justify-center flex-wrap">
-                  {project?.technologies.map((technology) => (
-                    <span
-                      key={technology._id}
-                      className="rounded-full border border-darkGreen/30 bg-darkGreen/10 px-3 py-1 text-sm text-darkGreen"
-                    >
-                      {technology.title}
-                    </span>
-                  ))}
-                </div>
+        <p className="mt-6 text-justify text-sm text-darkBlack md:text-base">
+          {project.summary}
+        </p>
 
-                <p className="text-sm md:text-md lg:text-lg text-justify ">
-                  {project?.summary}
-                </p>
-              </div>
-            </motion.div>
+        {(project.linkToBuild || project.liveUrl) && (
+          <div className="mt-8 flex flex-wrap gap-6">
+            {project.linkToBuild && (
+              <a
+                href={project.linkToBuild}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkClasses}
+              >
+                Source →
+              </a>
+            )}
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkClasses}
+              >
+                Live →
+              </a>
+            )}
           </div>
-        ))}
+        )}
+      </motion.article>
+
+      <div className="mt-8 flex items-center justify-center gap-6">
+        <button
+          type="button"
+          onClick={() => setIndex((current) => current - 1)}
+          disabled={index === 0}
+          aria-label="Previous project"
+          className={arrowClasses}
+        >
+          <ChevronLeftIcon className="h-5 w-5" />
+        </button>
+
+        <div className="flex items-center">
+          {projects.map((item, i) => (
+            <button
+              key={item._id}
+              type="button"
+              onClick={() => setIndex(i)}
+              aria-label={`Go to project ${i + 1}: ${item.title}`}
+              aria-current={i === index ? "true" : undefined}
+              className="flex h-11 w-6 items-center justify-center"
+            >
+              <span
+                aria-hidden="true"
+                className={`h-2 w-2 rounded-full transition-all duration-300 ${
+                  i === index ? "scale-150 bg-lightGreen" : "bg-grayColor/30"
+                }`}
+              />
+            </button>
+          ))}
+        </div>
+
+        <button
+          type="button"
+          onClick={() => setIndex((current) => current + 1)}
+          disabled={index === projects.length - 1}
+          aria-label="Next project"
+          className={arrowClasses}
+        >
+          <ChevronRightIcon className="h-5 w-5" />
+        </button>
       </div>
 
-      <div className="w-full absolute top-[20%] md:top-[30%] bg-darkGreen/10 left-0 h-[500px] -skew-y-12"></div>
-    </motion.div>
+      <p className="mt-4 text-center font-sans text-xs uppercase tracking-widest text-grayColor">
+        {index + 1} / {projects.length}
+      </p>
+    </div>
   );
 }
