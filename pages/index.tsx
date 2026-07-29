@@ -7,6 +7,7 @@ import WorkExperience from "../components/WorkExperience";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import ContactMe from "../components/ContactMe";
+import SideNav from "../components/SideNav";
 import Link from "next/link";
 import { ArrowUpIcon } from "@heroicons/react/24/solid";
 import {
@@ -29,10 +30,7 @@ type Props = {
 
 const Home = ({ pageInfo, experiences, education, projects, skills, socials }: Props) => {
   return (
-    <div
-      className="bg-lightBackground bg-[radial-gradient(circle_at_top,#FFFFFF_0%,#FAF6EE_42%,#F1EBDD_100%)] text-darkBlack h-screen snap-y snap-mandatory
-    overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-lightBackground scrollbar-thumb-darkGreen/80"
-    >
+    <div className="bg-lightBackground bg-[radial-gradient(circle_at_top,#FFFFFF_0%,#FAF6EE_42%,#F1EBDD_100%)] text-darkBlack overflow-x-hidden z-0">
       <Head>
         <link
           rel="apple-touch-icon"
@@ -55,38 +53,47 @@ const Home = ({ pageInfo, experiences, education, projects, skills, socials }: P
         <title>Chetan Kodeboyina | Portfolio</title>
       </Head>
 
+      <a
+        href="#hero"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:border focus:border-darkGreen/40 focus:bg-darkBackground focus:px-4 focus:py-2 focus:font-sans focus:text-sm focus:text-darkBlack"
+      >
+        Skip to content
+      </a>
+
+      <SideNav />
+
       {/* Hero */}
-      <section id="hero" className="snap-start">
+      <section id="hero">
         <Hero pageInfo={pageInfo} socials={socials} />
       </section>
 
       {/* About */}
-      <section id="about" className="snap-center border-t border-grayColor/20">
+      <section id="about" className="border-t border-grayColor/20">
         <About pageInfo={pageInfo} />
       </section>
 
       {/* Experiences */}
-      <section id="experience" className="snap-center border-t border-grayColor/20">
+      <section id="experience" className="border-t border-grayColor/20">
         <WorkExperience experiences={experiences} />
       </section>
 
       {/* Education */}
-      <section id="education" className="snap-start border-t border-grayColor/20">
+      <section id="education" className="border-t border-grayColor/20">
         <Education education={education} />
       </section>
 
       {/* Skills */}
-      <section id="skills" className="snap-start border-t border-grayColor/20">
+      <section id="skills" className="border-t border-grayColor/20">
         <Skills skills={skills} />
       </section>
 
       {/* Projects */}
-      <section id="projects" className="snap-start border-t border-grayColor/20">
+      <section id="projects" className="border-t border-grayColor/20">
         <Projects projects={projects} />
       </section>
 
       {/* Contact */}
-      <section id="contact" className="snap-start border-t border-grayColor/20">
+      <section id="contact" className="border-t border-grayColor/20">
         <ContactMe pageInfo={pageInfo} />
       </section>
 
