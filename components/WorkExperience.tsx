@@ -12,7 +12,7 @@ export default function WorkExperience({ experiences }: Props) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="mx-auto flex max-w-6xl flex-col px-12 py-24 text-left md:px-16 md:py-32"
+      className="mx-auto flex max-w-6xl flex-col px-6 py-24 text-left md:px-16 md:py-32"
     >
       <SectionHeading label="experience" />
 
