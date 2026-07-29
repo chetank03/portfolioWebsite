@@ -21,12 +21,16 @@ export default function ContactMe({ pageInfo }: Props) {
   };
 
   return (
-    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
-      <h3 className="absolute top-20 md:top-24 uppercase tracking-[20px] text-slate-400 text-xl md:text-2xl">
+    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-12 md:px-16 justify-evenly mx-auto items-center">
+      <h3 className="absolute top-20 md:top-24 flex items-center gap-3 uppercase tracking-[20px] text-grayColor text-xl md:text-2xl font-serif">
+        <span
+          className="inline-block h-2 w-2 rounded-full bg-yellowColor"
+          aria-hidden="true"
+        />
         Contact
       </h3>
       <div className="flex flex-col space-y-4 md:space-y-5 lg:space-y-6 xl:space-y-6 2xl:space-y-10">
-        <h4 className="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-semibold text-center">
+        <h4 className="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-serif font-semibold text-center">
           I have got just what you need.{" "}
           <span className="decoration-darkGreen/50 underline">Lets talk.</span>
         </h4>
@@ -75,7 +79,7 @@ export default function ContactMe({ pageInfo }: Props) {
             placeholder="Message"
             className="contactInput"
           />
-          <button className="bg-lightGreen py-3 md:py-5 px-10 rounded-lg text-slate-950 font-bold text-lg transition hover:bg-darkGreen">
+          <button className="bg-lightGreen py-3 md:py-5 px-10 rounded-lg text-darkBlack font-bold text-lg transition hover:bg-darkGreen">
             {" "}
             Submit
           </button>
