@@ -63,7 +63,7 @@ const Home = ({ pageInfo, experiences, education, projects, skills, socials }: P
       <SideNav />
 
       {/* Hero */}
-      <section id="hero">
+      <section id="hero" tabIndex={-1} className="outline-none">
         <Hero pageInfo={pageInfo} socials={socials} />
       </section>
 
