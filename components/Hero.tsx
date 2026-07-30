@@ -69,8 +69,7 @@ export default function Hero({ pageInfo, socials }: Props) {
           </span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl px-6 text-sm text-grayColor md:text-lg">
-          <span className="mr-1">{text}</span>
-          <Cursor cursorColor="#496747" />
+          {text}
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3 px-6 pt-8 md:gap-4">
