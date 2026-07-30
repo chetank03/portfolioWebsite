@@ -60,6 +60,17 @@ export const skills: Skill[] = [
   { ...blankMeta, _id: "skill-ble", _type: "skill", image: null, iconUrl: "https://cdn.simpleicons.org/bluetooth", progress: 66, title: "BLE" },
 ];
 
+/**
+ * Domains rather than tools, so they carry no logo or proficiency score and are
+ * listed as plain labels beneath the skill icons.
+ */
+export const machineLearning: string[] = [
+  "Deep Learning",
+  "Natural Language Processing",
+  "Computer Vision",
+  "Large Language Models",
+];
+
 export const experiences: Experience[] = [
   {
     ...blankMeta,
@@ -267,7 +278,12 @@ export const education: Education[] = [
     location: "New York, USA",
     dateStarted: "2025-09-01",
     dateEnded: "2027-05-01",
-    coursework: ["Machine Learning", "MLOps", "Embedded Systems"],
+    coursework: [
+      "Machine Learning",
+      "Deep Learning",
+      "MLOps",
+      "Embedded Systems",
+    ],
   },
   {
     ...blankMeta,
