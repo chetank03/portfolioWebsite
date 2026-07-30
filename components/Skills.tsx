@@ -3,7 +3,7 @@ import React from "react";
 import { Skill as SkillType } from "../typings";
 import Skill from "./Skill";
 import SectionHeading from "./SectionHeading";
-import { machineLearning } from "../data/portfolioData";
+import { skillGroups } from "../data/portfolioData";
 
 type Props = { skills: SkillType[] };
 
@@ -31,20 +31,24 @@ export default function Skills({ skills }: Props) {
         ))}
       </div>
 
-      <div className="mt-12 border-t border-grayColor/40 pt-8">
-        <h3 className="font-sans text-xs uppercase tracking-widest text-grayColor">
-          Machine Learning
-        </h3>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {machineLearning.map((area) => (
-            <span
-              key={area}
-              className="rounded-full border border-darkGreen/30 bg-darkGreen/10 px-3 py-1 text-sm text-darkGreen"
-            >
-              {area}
-            </span>
-          ))}
-        </div>
+      <div className="mt-12 space-y-8 border-t border-grayColor/40 pt-8">
+        {skillGroups.map((group) => (
+          <div key={group.label}>
+            <h3 className="font-sans text-xs uppercase tracking-widest text-grayColor">
+              {group.label}
+            </h3>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {group.items.map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-darkGreen/30 bg-darkGreen/10 px-3 py-1 text-sm text-darkGreen"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </motion.div>
   );

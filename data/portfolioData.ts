@@ -60,17 +60,39 @@ export const skills: Skill[] = [
   { ...blankMeta, _id: "skill-onnx", _type: "skill", image: null, iconUrl: "https://cdn.simpleicons.org/onnx", progress: 76, title: "ONNX" },
   { ...blankMeta, _id: "skill-platformio", _type: "skill", image: null, iconUrl: "https://cdn.simpleicons.org/platformio", progress: 68, title: "PlatformIO" },
   { ...blankMeta, _id: "skill-ble", _type: "skill", image: null, iconUrl: "https://cdn.simpleicons.org/bluetooth", progress: 66, title: "BLE" },
+  { ...blankMeta, _id: "skill-postgres", _type: "skill", image: null, iconUrl: "https://cdn.simpleicons.org/postgresql", progress: 78, title: "PostgreSQL" },
+  { ...blankMeta, _id: "skill-linux", _type: "skill", image: null, iconUrl: "https://cdn.simpleicons.org/linux", progress: 78, title: "Linux" },
+  { ...blankMeta, _id: "skill-scala", _type: "skill", image: null, iconUrl: "https://cdn.simpleicons.org/scala", progress: 70, title: "Scala" },
+  { ...blankMeta, _id: "skill-c", _type: "skill", image: null, iconUrl: "https://cdn.simpleicons.org/c", progress: 74, title: "C" },
+  { ...blankMeta, _id: "skill-actions", _type: "skill", image: null, iconUrl: "https://cdn.simpleicons.org/githubactions", progress: 74, title: "GitHub Actions" },
+  { ...blankMeta, _id: "skill-tailwind", _type: "skill", image: null, iconUrl: "https://cdn.simpleicons.org/tailwindcss", progress: 80, title: "Tailwind CSS" },
 ];
 
 /**
- * Domains rather than tools, so they carry no logo or proficiency score and are
- * listed as plain labels beneath the skill icons.
+ * Domains and practices rather than tools. They have no logo and no meaningful
+ * proficiency score, so they are listed as plain labels beneath the skill icons.
  */
-export const machineLearning: string[] = [
-  "Deep Learning",
-  "Natural Language Processing",
-  "Computer Vision",
-  "Large Language Models",
+export const skillGroups: { label: string; items: string[] }[] = [
+  {
+    label: "Machine Learning",
+    items: [
+      "Deep Learning",
+      "Natural Language Processing",
+      "Computer Vision",
+      "Large Language Models",
+    ],
+  },
+  {
+    label: "Systems and practices",
+    items: [
+      "REST API design",
+      "Microservices",
+      "Role-based access control",
+      "Test-driven development",
+      "Profiling and index tuning",
+      "WCAG 2.1 accessibility",
+    ],
+  },
 ];
 
 export const experiences: Experience[] = [
@@ -243,7 +265,7 @@ export const projects: Project[] = [
     _type: "project",
     title: "Studio (client site)",
     linkToBuild: "",
-    liveUrl: "https://studio-flax-mu-86.vercel.app",
+    liveUrl: "https://minnalgala.com",
     image: null,
     summary:
       "Site for a bespoke art-installation studio, built to a Figma design in Next.js, TypeScript, Supabase, and Framer Motion. Behind it sits a custom admin area with a rich-text journal editor, portfolio management, and an enquiry inbox wired to transactional email, so the owner runs the site without a developer. Error boundaries in place and CI running lint and build on every push.",
