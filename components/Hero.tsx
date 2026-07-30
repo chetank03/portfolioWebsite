@@ -66,7 +66,7 @@ export default function Hero({ pageInfo, socials }: Props) {
           <Cursor cursorColor="#5B7A5A" />
         </h1>
 
-        <div className="pt-5">
+        <div className="flex flex-wrap items-center justify-center gap-3 px-6 pt-8 md:gap-4">
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>
