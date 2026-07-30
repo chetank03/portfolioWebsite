@@ -30,12 +30,12 @@ export default function Skill({ skill, directionLeft }: Props) {
           </span>
         )}
       </motion.div>
-      <div className="absolute opacity-0 group-hover:opacity-95 transition duration-300 ease-in-out group-hover:bg-slate-950 w-16 h-16 md:w-20 md:h-20 lg:w-20 lg:h-20 xl:w-20 xl:h-20 2xl:w-28 2xl:h-28 rounded-full z-0">
+      <div className="absolute opacity-0 group-hover:opacity-95 transition duration-300 ease-in-out group-hover:bg-darkBackground w-16 h-16 md:w-20 md:h-20 lg:w-20 lg:h-20 xl:w-20 xl:h-20 2xl:w-28 2xl:h-28 rounded-full z-0">
         <div className="flex h-full flex-col items-center justify-center">
           <p className="text-xl md:text-3xl font-bold text-darkGreen opacity-100">
             {skill.progress}%
           </p>
-          <p className="hidden max-w-[5rem] text-center text-[10px] font-semibold text-slate-300 md:block">
+          <p className="hidden max-w-[5rem] text-center text-[10px] font-semibold text-darkBlack md:block">
             {skill.title}
           </p>
         </div>

@@ -8,13 +8,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        lightGreen: "#2DD4BF",
-        darkGreen: "#5EEAD4",
-        lightBackground: "#071014",
-        darkBackground: "#0B1720",
-        darkBlack: "#E6F1F5",
-        grayColor: "#94A3B8",
-        yellowColor: "FFE033",
+        lightGreen: "#7C9473",
+        darkGreen: "#5B7A5A",
+        lightBackground: "#FAF6EE",
+        darkBackground: "#F1EBDD",
+        darkBlack: "#2B2A25",
+        grayColor: "#6C6555",
+        yellowColor: "#C9A15A",
+      },
+      fontFamily: {
+        serif: ["'Noto Serif JP'", "serif"],
+        sans: ["'Noto Sans JP'", "sans-serif"],
       },
     },
   },
