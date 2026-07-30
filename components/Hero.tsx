@@ -63,6 +63,10 @@ export default function Hero({ pageInfo, socials }: Props) {
         </p>
         <h1 className="px-6 font-serif text-3xl font-semibold text-darkBlack md:px-16 md:text-5xl lg:text-6xl">
           hi, <span className="text-darkGreen">chetan</span> here.
+          {/* Decorative, so kept out of the heading's accessible name. */}
+          <span aria-hidden="true">
+            <Cursor cursorColor="#496747" />
+          </span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl px-6 text-sm text-grayColor md:text-lg">
           <span className="mr-1">{text}</span>
