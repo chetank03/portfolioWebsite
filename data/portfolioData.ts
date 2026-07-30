@@ -72,6 +72,7 @@ export const experiences: Experience[] = [
     dateEnded: "2026-08-01",
     isCurrentlyWorkingHere: false,
     jobTitle: "Software Engineer Intern",
+    location: "Hyderabad, India",
     points: [
       "Shipped a Django and React internal ERP portal serving role-scoped views to staff, managers, and external vendors, verified by 346 backend and 1,743 frontend tests.",
       "Enforced role-based access control across three visibility tiers, closing a cross-supplier document exposure found in adversarial review by fixing scoped file serving test-first.",
@@ -98,6 +99,7 @@ export const experiences: Experience[] = [
     dateEnded: "2025-08-01",
     isCurrentlyWorkingHere: false,
     jobTitle: "Software Engineer",
+    location: "Hyderabad, India",
     points: [
       "Improved real-time client workflow response times 50% by re-architecting a legacy PHP monolith into 4 Django and FastAPI microservices exposing 15+ REST endpoints and WebSocket channels.",
       "Cut end-to-end recognition time 40% by serving a PyTorch detector through ONNX Runtime behind an HTTP service, decoding 2D codes at 97% success under harsh plant lighting, 6.5M codes per day.",

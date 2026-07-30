@@ -3,16 +3,9 @@ import Image from "next/image";
 import React from "react";
 import { Education as EducationType } from "../typings";
 import SectionHeading from "./SectionHeading";
+import { formatMonthYear } from "../utils/formatDate";
 
 type Props = { education: EducationType[] };
-
-function formatMonthYear(date: string) {
-  const [year, month] = date.split("-");
-  return new Date(Number(year), Number(month) - 1).toLocaleDateString("en-US", {
-    month: "short",
-    year: "numeric",
-  });
-}
 
 export default function Education({ education }: Props) {
   return (
