@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { Skill as SkillType } from "../typings";
 import Skill from "./Skill";
+import SectionHeading from "./SectionHeading";
 
 type Props = { skills: SkillType[] };
 
@@ -11,20 +12,15 @@ export default function Skills({ skills }: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="h-screen flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-16 min-h-screen justify-center xl:space-y-0 mx-auto items-center "
+      className="mx-auto flex max-w-6xl flex-col px-12 py-24 md:px-16 md:py-32"
     >
-      <h3 className="absolute top-20 md:top-24 flex items-center gap-3 uppercase tracking-[20px] text-grayColor text-xl md:text-2xl font-serif">
-        <span
-          className="inline-block h-2 w-2 rounded-full bg-yellowColor"
-          aria-hidden="true"
-        />
-        Skills
-      </h3>
-      <h3 className="absolute top-32 md:top-36 uppercase tracking-[3px] text-grayColor/80 text-sm">
-        Hover over a skill for current proficiency
-      </h3>
+      <SectionHeading label="skills" />
 
-      <div className="grid grid-cols-4 gap-4 md:gap-5">
+      <p className="-mt-8 mb-10 uppercase tracking-[3px] text-grayColor/80 text-sm">
+        Hover over a skill for current proficiency
+      </p>
+
+      <div className="grid grid-cols-4 gap-4 md:gap-5 justify-items-center">
         {skills?.slice(0, skills.length / 2).map((skill) => (
           <Skill key={skill._id} skill={skill} />
         ))}

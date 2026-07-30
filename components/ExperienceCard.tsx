@@ -23,7 +23,7 @@ export default function ExperienceCard({ experience }: Props) {
   );
 
   return (
-    <article className="flex drop-shadow-xl flex-col rounded-3xl items-center space-y-0 w-full md:w-[calc(50%-1rem)] border border-darkGreen/20 bg-darkBackground bg-gradient-to-tr from-darkBackground to-darkGreen/10 p-5 md:p-10 hover:opacity-100 opacity-100 cursor-pointer transition-opacity duration-200 shadow-2xl shadow-darkBlack/10 ">
+    <article className="flex drop-shadow-xl flex-col rounded-3xl items-center space-y-0 w-full md:w-[calc(50%-1.5rem)] border border-darkGreen/20 bg-darkBackground bg-gradient-to-tr from-darkBackground to-darkGreen/10 p-5 md:p-10 hover:opacity-100 opacity-100 cursor-pointer transition-opacity duration-200 shadow-2xl shadow-darkBlack/10 ">
       <div className="w-full px-0 md:px-10">
         <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between md:text-left">
           <div>
