@@ -54,6 +54,8 @@ export const skills: Skill[] = [
   { ...blankMeta, _id: "skill-fastapi", _type: "skill", image: null, iconUrl: "https://cdn.simpleicons.org/fastapi", progress: 78, title: "FastAPI" },
   { ...blankMeta, _id: "skill-django", _type: "skill", image: null, iconUrl: "https://cdn.simpleicons.org/django", progress: 74, title: "Django" },
   { ...blankMeta, _id: "skill-docker", _type: "skill", image: null, iconUrl: "https://cdn.simpleicons.org/docker", progress: 75, title: "Docker" },
+  { ...blankMeta, _id: "skill-kubernetes", _type: "skill", image: null, iconUrl: "https://cdn.simpleicons.org/kubernetes", progress: 66, title: "Kubernetes" },
+  { ...blankMeta, _id: "skill-pytorch", _type: "skill", image: null, iconUrl: "https://cdn.simpleicons.org/pytorch", progress: 78, title: "PyTorch" },
   { ...blankMeta, _id: "skill-mlflow", _type: "skill", image: null, iconUrl: "https://cdn.simpleicons.org/mlflow", progress: 72, title: "MLflow" },
   { ...blankMeta, _id: "skill-onnx", _type: "skill", image: null, iconUrl: "https://cdn.simpleicons.org/onnx", progress: 76, title: "ONNX" },
   { ...blankMeta, _id: "skill-platformio", _type: "skill", image: null, iconUrl: "https://cdn.simpleicons.org/platformio", progress: 68, title: "PlatformIO" },
