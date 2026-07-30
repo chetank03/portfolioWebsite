@@ -31,10 +31,10 @@ export default function Skills({ skills }: Props) {
         ))}
       </div>
 
-      <div className="mt-12 border-t border-grayColor/20 pt-8">
-        <h4 className="font-sans text-xs uppercase tracking-widest text-grayColor">
+      <div className="mt-12 border-t border-grayColor/40 pt-8">
+        <h3 className="font-sans text-xs uppercase tracking-widest text-grayColor">
           Machine Learning
-        </h4>
+        </h3>
         <div className="mt-4 flex flex-wrap gap-2">
           {machineLearning.map((area) => (
             <span

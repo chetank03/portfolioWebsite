@@ -44,9 +44,9 @@ export default function Education({ education }: Props) {
               <p className="text-sm uppercase tracking-[6px] text-grayColor">
                 {item.school}
               </p>
-              <h4 className="mt-3 text-xl md:text-2xl font-serif font-semibold text-darkBlack">
+              <h3 className="mt-3 text-xl md:text-2xl font-serif font-semibold text-darkBlack">
                 {item.degree}
-              </h4>
+              </h3>
               <p className="mt-3 text-sm md:text-base text-grayColor">
                 {item.location} | {formatMonthYear(item.dateStarted)} -{" "}
                 {formatMonthYear(item.dateEnded)}

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 import React from "react";
 import { Experience } from "../typings";
 import { formatMonthYear } from "../utils/formatDate";
@@ -19,12 +20,25 @@ export default function ExperienceCard({ experience }: Props) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35 }}
     >
-      <h4 className="font-serif text-xl font-semibold text-darkBlack md:text-2xl">
-        {experience.jobTitle}{" "}
-        <span className="text-darkGreen">@ {experience.company}</span>
-      </h4>
+      <div className="flex items-start gap-4">
+        {experience.companyLogoUrl && (
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-darkGreen/20 bg-white p-1.5 shadow-sm">
+            <Image
+              src={experience.companyLogoUrl}
+              alt={`${experience.company} logo`}
+              width={44}
+              height={44}
+              className="h-full w-full object-contain"
+            />
+          </div>
+        )}
+        <h3 className="font-serif text-xl font-semibold text-darkBlack md:text-2xl">
+          {experience.jobTitle}{" "}
+          <span className="text-darkGreen">@ {experience.company}</span>
+        </h3>
+      </div>
 
-      <p className="mt-2 font-mono text-xs text-grayColor md:text-sm">
+      <p className="mt-3 font-mono text-xs text-grayColor md:text-sm">
         {dateRange}
         {experience.location ? ` · ${experience.location}` : ""}
       </p>

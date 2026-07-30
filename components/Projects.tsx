@@ -26,9 +26,9 @@ export default function Projects({ projects }: Props) {
             transition={{ duration: 0.5 }}
             className="flex w-[80%] shrink-0 snap-center flex-col rounded-3xl border border-darkGreen/20 bg-darkBackground p-8 shadow-2xl shadow-darkBlack/10 sm:w-[70%] md:w-[55%] md:p-10 lg:w-[46%]"
           >
-            <h4 className="font-serif text-2xl font-semibold text-darkBlack md:text-3xl">
+            <h3 className="font-serif text-2xl font-semibold text-darkBlack md:text-3xl">
               {project.title}
-            </h4>
+            </h3>
 
             <div className="mt-4 flex flex-wrap gap-2">
               {project.technologies.map((technology) => (

@@ -58,15 +58,21 @@ export default function Hero({ pageInfo, socials }: Props) {
       </div>
 
       <div className="z-20">
-        <h2 className="text-sm uppercase text-grayColor pb-2 tracking-[10px] md:tracking-[15px]">
+        <p className="text-sm uppercase text-grayColor pb-4 tracking-[10px] md:tracking-[15px]">
           {pageInfo?.role}
-        </h2>
-        <h1 className="text-2xl md:text-5xl lg:text-6xl font-serif font-semibold px-12 md:px-16">
-          <span className="mr-3">{text}</span>
-          <Cursor cursorColor="#5B7A5A" />
+        </p>
+        <h1 className="px-6 font-serif text-3xl font-semibold text-darkBlack md:px-16 md:text-5xl lg:text-6xl">
+          hi, <span className="text-darkGreen">chetan</span> here.
+          {/* Decorative, so kept out of the heading's accessible name. */}
+          <span aria-hidden="true">
+            <Cursor cursorColor="#496747" />
+          </span>
         </h1>
+        <p className="mx-auto mt-6 max-w-2xl px-6 text-sm text-grayColor md:text-lg">
+          {text}
+        </p>
 
-        <div className="pt-5">
+        <div className="flex flex-wrap items-center justify-center gap-3 px-6 pt-8 md:gap-4">
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>

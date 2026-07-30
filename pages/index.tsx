@@ -69,32 +69,32 @@ const Home = ({ pageInfo, experiences, education, projects, skills, socials }: P
 
       <main>
         {/* About */}
-        <section id="about" className="border-t border-grayColor/20">
+        <section id="about" className="border-t border-grayColor/40">
           <About pageInfo={pageInfo} />
         </section>
 
         {/* Experiences */}
-        <section id="experience" className="border-t border-grayColor/20">
+        <section id="experience" className="border-t border-grayColor/40">
           <WorkExperience experiences={experiences} />
         </section>
 
         {/* Education */}
-        <section id="education" className="border-t border-grayColor/20">
+        <section id="education" className="border-t border-grayColor/40">
           <Education education={education} />
         </section>
 
         {/* Skills */}
-        <section id="skills" className="border-t border-grayColor/20">
+        <section id="skills" className="border-t border-grayColor/40">
           <Skills skills={skills} />
         </section>
 
         {/* Projects */}
-        <section id="projects" className="border-t border-grayColor/20">
+        <section id="projects" className="border-t border-grayColor/40">
           <Projects projects={projects} />
         </section>
 
         {/* Contact */}
-        <section id="contact" className="border-t border-grayColor/20">
+        <section id="contact" className="border-t border-grayColor/40">
           <ContactMe pageInfo={pageInfo} />
         </section>
       </main>

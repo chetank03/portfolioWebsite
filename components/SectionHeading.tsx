@@ -8,11 +8,14 @@ type Props = {
 export default function SectionHeading({ label, action }: Props) {
   return (
     <div className="mb-12 flex w-full items-center gap-4">
-      <h3 className="whitespace-nowrap font-serif text-xl text-grayColor md:text-2xl">
-        <span className="text-darkGreen">/</span> {label}
-      </h3>
+      <h2 className="whitespace-nowrap font-serif text-xl text-grayColor md:text-2xl">
+        <span aria-hidden="true" className="text-darkGreen">
+          /
+        </span>{" "}
+        {label}
+      </h2>
 
-      <span aria-hidden="true" className="h-px flex-1 bg-grayColor/20" />
+      <span aria-hidden="true" className="h-px flex-1 bg-grayColor/40" />
 
       {action && (
         <a

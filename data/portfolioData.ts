@@ -144,69 +144,6 @@ export const projects: Project[] = [
   },
   {
     ...blankMeta,
-    _id: "project-iicci",
-    _type: "project",
-    title: "IICCI Trade Analytics",
-    linkToBuild: "",
-    liveUrl: "https://iicci.up.railway.app",
-    image: null,
-    summary:
-      "India-Italy bilateral trade analytics platform: Django REST and PostgreSQL behind a React and Recharts dashboard. 21 endpoints covered by 24 tests that pin the aggregation rules, Firebase Google sign-in gated behind a Django-side admin approval step, Excel import in append or replace mode, and short-lived response caching on the reporting routes.",
-    technologies: [
-      { ...blankMeta, _id: "proj-tech-django-iicci", _type: "technology", image: null, progress: 80, title: "Django REST" },
-      { ...blankMeta, _id: "proj-tech-postgres-iicci", _type: "technology", image: null, progress: 74, title: "PostgreSQL" },
-      { ...blankMeta, _id: "proj-tech-recharts-iicci", _type: "technology", image: null, progress: 76, title: "React + Recharts" },
-    ],
-  },
-  {
-    ...blankMeta,
-    _id: "project-bigsmiles",
-    _type: "project",
-    title: "BigSMILES Viewer",
-    linkToBuild: "https://github.com/chetank03/bigsmiles-viewer",
-    liveUrl: "https://bigsmiles-viewer.up.railway.app",
-    image: null,
-    summary:
-      "Parses a subset of the BigSMILES polymer notation into a graph, rendering stochastic objects and repeat units as nested boxes instead of flattening them the way a plain SMILES viewer would, with RDKit computing per-unit formula and weight. Code-splitting Cytoscape cut the initial JS bundle 69 percent, from 632 KB to 197 KB. 13 API tests and 7 Playwright specs run in CI, including axe-core WCAG 2.1 AA audits that caught a real contrast failure.",
-    technologies: [
-      { ...blankMeta, _id: "proj-tech-fastapi-bigsmiles", _type: "technology", image: null, progress: 78, title: "FastAPI" },
-      { ...blankMeta, _id: "proj-tech-cytoscape-bigsmiles", _type: "technology", image: null, progress: 74, title: "Cytoscape.js" },
-      { ...blankMeta, _id: "proj-tech-rdkit-bigsmiles", _type: "technology", image: null, progress: 70, title: "RDKit" },
-    ],
-  },
-  {
-    ...blankMeta,
-    _id: "project-studio",
-    _type: "project",
-    title: "Studio (client site)",
-    linkToBuild: "",
-    liveUrl: "https://studio-flax-mu-86.vercel.app",
-    image: null,
-    summary:
-      "Site for a bespoke art-installation studio, built to a Figma design in Next.js, TypeScript, Supabase, and Framer Motion. Behind it sits a custom admin area with a rich-text journal editor, portfolio management, and an enquiry inbox wired to transactional email, so the owner runs the site without a developer. Error boundaries in place and CI running lint and build on every push.",
-    technologies: [
-      { ...blankMeta, _id: "proj-tech-next-studio", _type: "technology", image: null, progress: 80, title: "Next.js" },
-      { ...blankMeta, _id: "proj-tech-supabase-studio", _type: "technology", image: null, progress: 74, title: "Supabase" },
-      { ...blankMeta, _id: "proj-tech-framer-studio", _type: "technology", image: null, progress: 72, title: "Framer Motion" },
-    ],
-  },
-  {
-    ...blankMeta,
-    _id: "project-parkinsons",
-    _type: "project",
-    title: "Parkinson's Motion Monitor",
-    linkToBuild: "https://github.com/chetank03/parkinsons-motion-monitor",
-    image: null,
-    summary:
-      "About 1,445 lines of embedded C++ on an STM32 DISCO-L475VG-IOT01A, reading an LSM6DSL IMU over I2C at 400 kHz. A 256-point CMSIS-DSP FFT over a 156-sample window at 52 Hz separates resting tremor (3-5 Hz), dyskinesia (5-7 Hz), and freezing of gait, with 3-window confirmation to suppress false positives and BLE GATT telemetry out. Interrupt-driven with a polling fallback, so a missed data-ready line degrades the sample rate instead of stalling the device. Thresholds are hand-tuned; there is no on-device ML.",
-    technologies: [
-      { ...blankMeta, _id: "proj-tech-stm32-parkinsons", _type: "technology", image: null, progress: 74, title: "STM32 / mbed" },
-      { ...blankMeta, _id: "proj-tech-cmsis-parkinsons", _type: "technology", image: null, progress: 70, title: "CMSIS-DSP FFT" },
-      { ...blankMeta, _id: "proj-tech-ble-parkinsons", _type: "technology", image: null, progress: 66, title: "BLE GATT" },
-    ],
-  },
-  {
-    ...blankMeta,
     _id: "project-gla-dpo",
     _type: "project",
     title: "GLA-DPO Transformer",
@@ -237,6 +174,85 @@ export const projects: Project[] = [
   },
   {
     ...blankMeta,
+    _id: "project-parkinsons",
+    _type: "project",
+    title: "Parkinson's Motion Monitor",
+    linkToBuild: "https://github.com/chetank03/parkinsons-motion-monitor",
+    image: null,
+    summary:
+      "About 1,445 lines of embedded C++ on an STM32 DISCO-L475VG-IOT01A, reading an LSM6DSL IMU over I2C at 400 kHz. A 256-point CMSIS-DSP FFT over a 156-sample window at 52 Hz separates resting tremor (3-5 Hz), dyskinesia (5-7 Hz), and freezing of gait, with 3-window confirmation to suppress false positives and BLE GATT telemetry out. Interrupt-driven with a polling fallback, so a missed data-ready line degrades the sample rate instead of stalling the device. Thresholds are hand-tuned; there is no on-device ML.",
+    technologies: [
+      { ...blankMeta, _id: "proj-tech-stm32-parkinsons", _type: "technology", image: null, progress: 74, title: "STM32 / mbed" },
+      { ...blankMeta, _id: "proj-tech-cmsis-parkinsons", _type: "technology", image: null, progress: 70, title: "CMSIS-DSP FFT" },
+      { ...blankMeta, _id: "proj-tech-ble-parkinsons", _type: "technology", image: null, progress: 66, title: "BLE GATT" },
+    ],
+  },
+  {
+    ...blankMeta,
+    _id: "project-2d-code",
+    _type: "project",
+    title: "2D Code Detection and Decoding",
+    linkToBuild: "",
+    image: null,
+    summary:
+      "A CNN detector for QR and Data Matrix codes at 96% detection accuracy, reaching up to 100 codes per frame in under 500ms with OpenCV. This is the model behind the recognition work in my C-TEL role: served as a PyTorch detector through ONNX Runtime behind an HTTP service, it decodes at 97% success under harsh plant lighting across 6.5M codes per day, and cut end-to-end recognition time 40%.",
+    technologies: [
+      { ...blankMeta, _id: "proj-tech-cnn", _type: "technology", image: null, progress: 78, title: "CNN" },
+      { ...blankMeta, _id: "proj-tech-pytorch-cv", _type: "technology", image: null, progress: 76, title: "PyTorch" },
+      { ...blankMeta, _id: "proj-tech-onnx-cv", _type: "technology", image: null, progress: 76, title: "ONNX Runtime" },
+      { ...blankMeta, _id: "proj-tech-opencv", _type: "technology", image: null, progress: 80, title: "OpenCV" },
+    ],
+  },
+  {
+    ...blankMeta,
+    _id: "project-bigsmiles",
+    _type: "project",
+    title: "BigSMILES Viewer",
+    linkToBuild: "https://github.com/chetank03/bigsmiles-viewer",
+    liveUrl: "https://bigsmiles-viewer.up.railway.app",
+    image: null,
+    summary:
+      "Parses a subset of the BigSMILES polymer notation into a graph, rendering stochastic objects and repeat units as nested boxes instead of flattening them the way a plain SMILES viewer would, with RDKit computing per-unit formula and weight. Code-splitting Cytoscape cut the initial JS bundle 69 percent, from 632 KB to 197 KB. 13 API tests and 7 Playwright specs run in CI, including axe-core WCAG 2.1 AA audits that caught a real contrast failure.",
+    technologies: [
+      { ...blankMeta, _id: "proj-tech-fastapi-bigsmiles", _type: "technology", image: null, progress: 78, title: "FastAPI" },
+      { ...blankMeta, _id: "proj-tech-cytoscape-bigsmiles", _type: "technology", image: null, progress: 74, title: "Cytoscape.js" },
+      { ...blankMeta, _id: "proj-tech-rdkit-bigsmiles", _type: "technology", image: null, progress: 70, title: "RDKit" },
+    ],
+  },
+  {
+    ...blankMeta,
+    _id: "project-iicci",
+    _type: "project",
+    title: "IICCI Trade Analytics",
+    linkToBuild: "",
+    liveUrl: "https://iicci.up.railway.app",
+    image: null,
+    summary:
+      "India-Italy bilateral trade analytics platform: Django REST and PostgreSQL behind a React and Recharts dashboard. 21 endpoints covered by 24 tests that pin the aggregation rules, Firebase Google sign-in gated behind a Django-side admin approval step, Excel import in append or replace mode, and short-lived response caching on the reporting routes.",
+    technologies: [
+      { ...blankMeta, _id: "proj-tech-django-iicci", _type: "technology", image: null, progress: 80, title: "Django REST" },
+      { ...blankMeta, _id: "proj-tech-postgres-iicci", _type: "technology", image: null, progress: 74, title: "PostgreSQL" },
+      { ...blankMeta, _id: "proj-tech-recharts-iicci", _type: "technology", image: null, progress: 76, title: "React + Recharts" },
+    ],
+  },
+  {
+    ...blankMeta,
+    _id: "project-studio",
+    _type: "project",
+    title: "Studio (client site)",
+    linkToBuild: "",
+    liveUrl: "https://studio-flax-mu-86.vercel.app",
+    image: null,
+    summary:
+      "Site for a bespoke art-installation studio, built to a Figma design in Next.js, TypeScript, Supabase, and Framer Motion. Behind it sits a custom admin area with a rich-text journal editor, portfolio management, and an enquiry inbox wired to transactional email, so the owner runs the site without a developer. Error boundaries in place and CI running lint and build on every push.",
+    technologies: [
+      { ...blankMeta, _id: "proj-tech-next-studio", _type: "technology", image: null, progress: 80, title: "Next.js" },
+      { ...blankMeta, _id: "proj-tech-supabase-studio", _type: "technology", image: null, progress: 74, title: "Supabase" },
+      { ...blankMeta, _id: "proj-tech-framer-studio", _type: "technology", image: null, progress: 72, title: "Framer Motion" },
+    ],
+  },
+  {
+    ...blankMeta,
     _id: "project-notely",
     _type: "project",
     title: "Notely - Real-Time Notes Platform",
@@ -249,23 +265,7 @@ export const projects: Project[] = [
       { ...blankMeta, _id: "proj-tech-notely-react", _type: "technology", image: null, progress: 84, title: "ReactJS" },
       { ...blankMeta, _id: "proj-tech-notely-rest", _type: "technology", image: null, progress: 74, title: "REST APIs" },
     ],
-  },
-  {
-    ...blankMeta,
-    _id: "project-2d-code",
-    _type: "project",
-    title: "2D Code Detection and Decoding",
-    linkToBuild: "",
-    image: null,
-    summary:
-      "Designed a CNN-based computer vision model achieving 96% accuracy for QR and Data Matrix detection, then deployed it with ONNX Runtime and OpenCV to detect up to 100 codes in under 500ms.",
-    technologies: [
-      { ...blankMeta, _id: "proj-tech-cnn", _type: "technology", image: null, progress: 78, title: "CNN" },
-      { ...blankMeta, _id: "proj-tech-onnx-cv", _type: "technology", image: null, progress: 76, title: "ONNX Runtime" },
-      { ...blankMeta, _id: "proj-tech-opencv", _type: "technology", image: null, progress: 80, title: "OpenCV" },
-    ],
-  },
-];
+  },];
 
 export const education: Education[] = [
   {
