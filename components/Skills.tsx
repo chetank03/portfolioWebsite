@@ -3,6 +3,7 @@ import React from "react";
 import { Skill as SkillType } from "../typings";
 import Skill from "./Skill";
 import SectionHeading from "./SectionHeading";
+import { machineLearning } from "../data/portfolioData";
 
 type Props = { skills: SkillType[] };
 
@@ -28,6 +29,22 @@ export default function Skills({ skills }: Props) {
         {skills?.slice(skills.length / 2, skills.length).map((skill) => (
           <Skill key={skill._id} skill={skill} directionLeft />
         ))}
+      </div>
+
+      <div className="mt-12 border-t border-grayColor/20 pt-8">
+        <h4 className="font-sans text-xs uppercase tracking-widest text-grayColor">
+          Machine Learning
+        </h4>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {machineLearning.map((area) => (
+            <span
+              key={area}
+              className="rounded-full border border-darkGreen/30 bg-darkGreen/10 px-3 py-1 text-sm text-darkGreen"
+            >
+              {area}
+            </span>
+          ))}
+        </div>
       </div>
     </motion.div>
   );
