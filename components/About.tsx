@@ -39,11 +39,11 @@ export default function About({ pageInfo }: Props) {
           </div>
         </motion.div>
         <div className="space-y-5 md:space-y-10 px-0 md:px-10">
-          <h4 className="text-xl md:text-4xl font-serif font-semibold">
+          <h3 className="text-xl md:text-4xl font-serif font-semibold">
             Here is a{" "}
             <span className=" underline decoration-darkGreen/50">little</span>{" "}
             background
-          </h4>
+          </h3>
           <p className="text-sm md:text-lg lg:text-lg text-justify">
             {pageInfo?.backgroundInformation}
           </p>
