@@ -20,7 +20,7 @@ export default function Hero({ pageInfo, socials }: Props) {
   });
 
   return (
-    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+    <div className="relative h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
 
       <svg
@@ -46,7 +46,7 @@ export default function Hero({ pageInfo, socials }: Props) {
           <SocialIcon
             key={social._id}
             url={social.url}
-            fgColor="#78715F"
+            fgColor="#6C6555"
             bgColor="transparent"
             className="!h-10 !w-10"
           />
@@ -81,6 +81,9 @@ export default function Hero({ pageInfo, socials }: Props) {
           </Link>
           <Link href="#projects">
             <button className="heroButton">Projects</button>
+          </Link>
+          <Link href="#contact">
+            <button className="heroButton">Contact</button>
           </Link>
         </div>
       </div>

@@ -30,7 +30,7 @@ type Props = {
 
 const Home = ({ pageInfo, experiences, education, projects, skills, socials }: Props) => {
   return (
-    <div className="bg-lightBackground bg-[radial-gradient(circle_at_top,#FFFFFF_0%,#FAF6EE_42%,#F1EBDD_100%)] text-darkBlack overflow-x-hidden z-0">
+    <div className="bg-lightBackground bg-[radial-gradient(circle_at_top,#FDFAF3_0%,#EDE6D8_42%,#E2D9C6_100%)] text-darkBlack overflow-x-hidden z-0">
       <Head>
         <link
           rel="apple-touch-icon"
@@ -67,35 +67,37 @@ const Home = ({ pageInfo, experiences, education, projects, skills, socials }: P
         <Hero pageInfo={pageInfo} socials={socials} />
       </section>
 
-      {/* About */}
-      <section id="about" className="border-t border-grayColor/20">
-        <About pageInfo={pageInfo} />
-      </section>
+      <main>
+        {/* About */}
+        <section id="about" className="border-t border-grayColor/20">
+          <About pageInfo={pageInfo} />
+        </section>
 
-      {/* Experiences */}
-      <section id="experience" className="border-t border-grayColor/20">
-        <WorkExperience experiences={experiences} />
-      </section>
+        {/* Experiences */}
+        <section id="experience" className="border-t border-grayColor/20">
+          <WorkExperience experiences={experiences} />
+        </section>
 
-      {/* Education */}
-      <section id="education" className="border-t border-grayColor/20">
-        <Education education={education} />
-      </section>
+        {/* Education */}
+        <section id="education" className="border-t border-grayColor/20">
+          <Education education={education} />
+        </section>
 
-      {/* Skills */}
-      <section id="skills" className="border-t border-grayColor/20">
-        <Skills skills={skills} />
-      </section>
+        {/* Skills */}
+        <section id="skills" className="border-t border-grayColor/20">
+          <Skills skills={skills} />
+        </section>
 
-      {/* Projects */}
-      <section id="projects" className="border-t border-grayColor/20">
-        <Projects projects={projects} />
-      </section>
+        {/* Projects */}
+        <section id="projects" className="border-t border-grayColor/20">
+          <Projects projects={projects} />
+        </section>
 
-      {/* Contact */}
-      <section id="contact" className="border-t border-grayColor/20">
-        <ContactMe pageInfo={pageInfo} />
-      </section>
+        {/* Contact */}
+        <section id="contact" className="border-t border-grayColor/20">
+          <ContactMe pageInfo={pageInfo} />
+        </section>
+      </main>
 
       <Link href="#hero" aria-label="Back to top">
         <footer className="sticky bottom-5 z-30 flex w-full cursor-pointer justify-end pr-5 md:pr-10">

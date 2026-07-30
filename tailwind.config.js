@@ -9,11 +9,11 @@ module.exports = {
     extend: {
       colors: {
         lightGreen: "#7C9473",
-        darkGreen: "#5B7A5A",
-        lightBackground: "#FAF6EE",
-        darkBackground: "#F1EBDD",
+        darkGreen: "#496747",
+        lightBackground: "#EDE6D8",
+        darkBackground: "#E2D9C6",
         darkBlack: "#2B2A25",
-        grayColor: "#6C6555",
+        grayColor: "#645E4F",
         yellowColor: "#C9A15A",
       },
       fontFamily: {

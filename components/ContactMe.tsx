@@ -22,7 +22,7 @@ export default function ContactMe({ pageInfo }: Props) {
   };
 
   return (
-    <div className="mx-auto flex max-w-7xl flex-col px-12 py-24 md:px-16 md:py-32">
+    <div className="mx-auto flex max-w-6xl flex-col px-6 py-24 md:px-16 md:py-32">
       <SectionHeading label="contact" />
 
       <div className="mx-auto flex flex-col space-y-4 md:space-y-5 lg:space-y-6 xl:space-y-6 2xl:space-y-10">
@@ -48,19 +48,19 @@ export default function ContactMe({ pageInfo }: Props) {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 w-80 md:w-fit mx-auto"
+          className="flex flex-col space-y-2 w-full max-w-xs md:w-fit md:max-w-none mx-auto"
         >
           <div className="md:flex md:space-x-2 space-y-2 md:space-y-0 ">
             <input
               {...register("name")}
               placeholder="Name"
-              className="contactInput w-80 md:w-auto"
+              className="contactInput w-full md:w-auto"
               type="text"
             />{" "}
             <input
               {...register("email")}
               placeholder="Email"
-              className="contactInput w-80 md:w-auto"
+              className="contactInput w-full md:w-auto"
               type="email"
             />
           </div>
